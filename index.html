@@ -18,12 +18,15 @@
 		<div class="hLeft"><p>MahiFam</p></div>
 		<div class="hCenter"><form action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
 		<div id='hRight' class="hRight">
-			<a href='#shop' onClick='showCart();'><i id='shopIcon' class="fas fa-shopping-cart"></i></a>
+			<a href='#shop' id='showShopCart' onClick='showCart(this.id);'><i class="fas fa-shopping-cart"></i></a>
 			<div id='shopBar' class='shopBar'>
 				<a id='closeCart' href="#close" onclick="closeCart();"><i class="fa fa-times" aria-hidden="true"></i></a>
 				<p>سبد خرید خالی می باشد</p>
 			</div>
-			<i id='userIcon' class="fas fa-user"></i>
+			<a href="#login" id='showAccount' onClick='showAccount(this.id);'> <i class="fas fa-user"></i></a>
+			<div id='userBar' class='userBar'>
+				<p>user account</p>
+			</div>
 			<i id='searchIcon' class="fa fa-search" aria-hidden="true"></i>
 		</div>
 		<nav class="hNav">
@@ -90,12 +93,48 @@ function myScroll() {
     document.getElementById("searchIcon").style.display = "none";
   }
 }
-function showCart(){
-	document.getElementById("shopBar").style.display='block';
+function showCart(toggle){
+	if(toggle=='showShopCart'){
+	document.getElementById("shopBar").style.visibility='visible';
+	//document.getElementById("shopBar").style.top='120px';
+	//document.getElementById("shopBar").style.zIndex='100';
+	//document.getElementById("shopBar").style.transition='1s top';
+	document.getElementById(toggle).id='closeShopCart';
+	}
+	else{
+	//document.getElementById("shopBar").style.transition='1s top';
+	//document.getElementById("shopBar").style.top='0';
+	//document.getElementById("shopBar").style.zIndex='100';
+	document.getElementById("shopBar").style.visibility='hidden';
+	document.getElementById(toggle).id='showShopCart';
+	}
+	document.getElementById('userBar').style.visibility='hidden';
+	document.getElementById('closeAccount').id='showAccount';
 }
+function showAccount(toggle){
+	if(toggle=='showAccount'){
+	document.getElementById("userBar").style.visibility='visible';
+	//document.getElementById("shopBar").style.top='120px';
+	//document.getElementById("shopBar").style.zIndex='100';
+	//document.getElementById("shopBar").style.transition='1s top';
+	document.getElementById(toggle).id='closeAccount';
+	}
+	else{
+	//document.getElementById("shopBar").style.transition='1s top';
+	//document.getElementById("shopBar").style.top='0';
+	//document.getElementById("shopBar").style.zIndex='100';
+	document.getElementById("userBar").style.visibility='hidden';
+	document.getElementById(toggle).id='showAccount';
+	}
+	document.getElementById('shopBar').style.visibility='hidden';
+	document.getElementById('closeShopCart').id='showShopCart';
+}
+
 function closeCart() {
-document.getElementById("shopBar").style.display='none';
+document.getElementById("shopBar").style.visibility='hidden';
+document.getElementById('closeShopCart').id='showShopCart';
 }
+
 </script>
 	</body>
 	</html>
