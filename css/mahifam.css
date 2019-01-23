@@ -20,9 +20,11 @@ background-color:#63a2ff;color:#000000;font-family: 'B Helal';}
 #searchIcon{display:none;}
 .shopBar{z-index:1;display: block;visibility: hidden; position:absolute;top:120px;right:0;width:25%;height:100px;
 background-color: #111111;box-shadow: 1px 5px 7px #111;border-radius: 0 0 6px 6px;transition: 2s top;}
+.fixShopBar{position:fixed;top:50px;}
 .shopBar p{text-align: center;color:#ffffff;font-size:16px;font-family: 'B Helal';padding-top:30px;}
 .userBar{z-index:1;display: block;visibility: hidden; position:absolute;top:120px;right:0;width:25%;height:100px;
 background-color: #111111;box-shadow: 1px 5px 7px #111;border-radius: 0 0 6px 6px;transition: 2s top;}
+.fixUserBar{position:fixed;top:50px;}
 .userBar p{text-align: center;color:#ffffff;font-size:16px;font-family: 'B Helal';padding-top:30px;}
 #closeCart{position:absolute;right:0;}
 #userIcon{position: absolute;display: block;}

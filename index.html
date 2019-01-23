@@ -27,7 +27,10 @@
 			<div id='userBar' class='userBar'>
 				<p>user account</p>
 			</div>
-			<i id='searchIcon' class="fa fa-search" aria-hidden="true"></i>
+			<a href="#search" id='showSearch' onClick='showSearch(this.id);'><i id='searchIcon' class="fa fa-search" aria-hidden="true"></i></a>
+			<div id='searchBar' class='searchBar'>
+				<p>search bar</p>
+			</div>
 		</div>
 		<nav class="hNav">
 			<ul>
@@ -85,11 +88,15 @@ function myScroll() {
     document.getElementById("slide").className = "slideShow slideBlur";
     document.getElementById("fixNav").className = "textSlideShow fixNav";
     document.getElementById("hRight").className = "hRight fixhRight";
+    document.getElementById("shopBar").className = "shopBar fixShopBar";
+    document.getElementById("userBar").className = "userBar fixUserBar";
     document.getElementById("searchIcon").style.display = "block";
   } else {
     document.getElementById("slide").className = "slideShow";
     document.getElementById("fixNav").className = "textSlideShow";
     document.getElementById("hRight").className = "hRight";
+    document.getElementById("shopBar").className = "shopBar";
+    document.getElementById("userBar").className = "userBar";
     document.getElementById("searchIcon").style.display = "none";
   }
 }
