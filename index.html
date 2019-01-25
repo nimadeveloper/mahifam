@@ -1,147 +1,127 @@
 <!DOCTYPE html>
-	<html lang="fa-ir">
-	<head>
-		<meta charset="utf-8">
-		<title>فروشگاه خرید ماهی و لوازم اکواریوم ماهیفام</title>
-		<link rel="canonical" href="https://www.mahifam.com"/>
-		<meta name='description' content='فروش انواع ماهی های زینتی و اکواریومی آب شیرین و طراحی و ساخت و پیاده سازی اکواریوم های پلنت'>
-		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-		<meta name='keywords' content='اکواریوم , ماهی  ,  آب شیرین'>
-		<meta name='author' content='nima bashirzadeh'>
-		<link rel="stylesheet" type="text/css" href="css/mahifam.css">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-	</head>
-	<body>
-	<header>
-		<div class="hLeft"><p>MahiFam</p></div>
-		<div class="hCenter"><form action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
-		<div id='hRight' class="hRight">
-			<a href='#shop' id='showShopCart' onClick='showCart(this.id);'><i class="fas fa-shopping-cart"></i></a>
-			<div id='shopBar' class='shopBar'>
-				<a id='closeCart' href="#close" onclick="closeCart();"><i class="fa fa-times" aria-hidden="true"></i></a>
-				<p>سبد خرید خالی می باشد</p>
-			</div>
-			<a href="#login" id='showAccount' onClick='showAccount(this.id);'> <i class="fas fa-user"></i></a>
-			<div id='userBar' class='userBar'>
-				<p>user account</p>
-			</div>
-			<a href="#search" id='showSearch' onClick='showSearch(this.id);'><i id='searchIcon' class="fa fa-search" aria-hidden="true"></i></a>
-			<div id='searchBar' class='searchBar'>
-				<p>search bar</p>
-			</div>
+<html lang="fa-ir">
+<head>
+	<meta charset="utf-8">
+	<title>فروشگاه خرید ماهی و لوازم اکواریوم ماهیفام</title>
+	<link rel="canonical" href="https://www.mahifam.com"/>
+	<meta name='description' content='فروش انواع ماهی های زینتی و اکواریومی آب شیرین و طراحی و ساخت و پیاده سازی اکواریوم های پلنت'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<meta name='keywords' content='اکواریوم , ماهی  ,  آب شیرین'>
+	<meta name='author' content='nima bashirzadeh'>
+	<link rel="stylesheet" type="text/css" href="css/mahifam.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+</head>
+<body>
+<header>
+	<div class="hLeft"><p>MahiFam</p></div>
+	<div id='hCenter' class="hCenter"><form action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
+	<div id='hRight' class="hRight">
+		<i id='showCart' onClick='showCart();' class="fas fa-shopping-cart"></i>
+		<div id='cartBar' class='cartBar'>
+			
+			<p>سبد خرید خالی می باشد</p>
 		</div>
-		<nav class="hNav">
-			<ul>
-				<li><a href="index.html" title='main page'>صفحه اصلی</a></li>
-				<li><a href="#fish" title=''>ماهی آب شیرین</a></li>
-					<ul class='subMenu buyFish'>
-						<li><a href="#" title=''>گوشتخوار</a></li>
-						<li><a href="#" title=''>گیاهخوار</a></li>
-					</ul>
-				<li><a href="" title=''>لوازم</a></li>
-					<ul class='subMenu accessories'>
-						<li><a href="#" title=''>هیتر</a></li>
-						<li><a href="#" title=''>پمپ هوا</a></li>
-					</ul>
-				<li><a href="" title=''>اکواریوم و پایه</a></li>
-				<li><a href="" title=''>غذا و دارو</a></li>
-				<li><a href="" title=''>دکوراسیون</a></li>
-				<li><a href="" title=''>گیاه</a></li>
-				<li><a href="" title=''>پشتیبانی</a></li>
-			</ul>
-		</nav>
-	<div id='fixNav' class='textSlideShow'><p>MahiFam</p><div></div></div>
-	</header>
-	<section>
-		<div id='slide' class='slideShow'>
-		<img src="images/slide1.jpg" width='100%' height='auto'>
+		<i id='showAccount' onClick='showAccount();' class="fas fa-user"></i>
+		<div id='accountBar' class='accountBar'>
+			<p>user account</p>
 		</div>
-		<div class="txtSection1">
-			<h1>فروش ماهی های زینتی و لوازم اکواریوم در فروشگاه ماهیفام</h1>
-			<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
-		</div>
-		<div class="imgSection imgSection1">
-		</div>
-		<div class="txtSection1">
-			<h2>طراحی و ساخت و پیاده سازی انواع اکواریوم </h2>
-			<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
-		</div>
-		<div class="imgSection imgSection2">
-		</div>
-		<div class="txtSection1">
-			<h2>طراحی و پیاده سازی اکواریوم پلنت</h2>
-			<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
-		</div>
-		<div class="imgSection imgSection3">
-		</div>
-	</section>
-	<footer>
-		
-	</footer>
+		<i id='searchIcon' onClick='showSearch();' class="fa fa-search" aria-hidden="true"></i>
+	</div>
+	<nav class="hNav">
+		<ul>
+			<li><a href="index.html" title='main page'>صفحه اصلی</a></li>
+			<li><a href="#fish" title=''>ماهی آب شیرین</a></li>
+				<ul class='subMenu buyFish'>
+					<li><a href="#" title=''>گوشتخوار</a></li>
+					<li><a href="#" title=''>گیاهخوار</a></li>
+				</ul>
+			<li><a href="" title=''>لوازم</a></li>
+				<ul class='subMenu accessories'>
+					<li><a href="#" title=''>هیتر</a></li>
+					<li><a href="#" title=''>پمپ هوا</a></li>
+				</ul>
+			<li><a href="" title=''>اکواریوم و پایه</a></li>
+			<li><a href="" title=''>غذا و دارو</a></li>
+			<li><a href="" title=''>دکوراسیون</a></li>
+			<li><a href="" title=''>گیاه</a></li>
+			<li><a href="" title=''>پشتیبانی</a></li>
+		</ul>
+	</nav>
+<div id='fixNav' class='textSlideShow'><p>MahiFam</p><div></div></div>
+</header>
+<section>
+	<div id='slide' class='slideShow'>
+	<img src="images/slide1.jpg" width='100%' height='auto'>
+	</div>
+	<div class="txtSection1">
+		<h1>فروش ماهی های زینتی و لوازم اکواریوم در فروشگاه ماهیفام</h1>
+		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
+	</div>
+	<div class="imgSection imgSection1">
+	</div>
+	<div class="txtSection1">
+		<h2>طراحی و ساخت و پیاده سازی انواع اکواریوم </h2>
+		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
+	</div>
+	<div class="imgSection imgSection2">
+	</div>
+	<div class="txtSection1">
+		<h2>طراحی و پیاده سازی اکواریوم پلنت</h2>
+		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
+	</div>
+	<div class="imgSection imgSection3">
+	</div>
+</section>
+<footer>
+	
+</footer>
 <script>
 window.onscroll = function() {myScroll()};
 
 function myScroll() {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    document.getElementById("slide").className = "slideShow slideBlur";
-    document.getElementById("fixNav").className = "textSlideShow fixNav";
-    document.getElementById("hRight").className = "hRight fixhRight";
-    document.getElementById("shopBar").className = "shopBar fixShopBar";
-    document.getElementById("userBar").className = "userBar fixUserBar";
-    document.getElementById("searchIcon").style.display = "block";
-  } else {
-    document.getElementById("slide").className = "slideShow";
-    document.getElementById("fixNav").className = "textSlideShow";
-    document.getElementById("hRight").className = "hRight";
-    document.getElementById("shopBar").className = "shopBar";
-    document.getElementById("userBar").className = "userBar";
-    document.getElementById("searchIcon").style.display = "none";
-  }
+if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+document.getElementById("slide").className = "slideShow slideBlur";
+document.getElementById("fixNav").className = "textSlideShow fixNav";
+document.getElementById("hRight").className = "hRight fixhRight";
+document.getElementById("hCenter").className = "hCenter fixhCenter";
+document.getElementById('searchIcon').style.display='block';
+} else {
+document.getElementById("slide").className = "slideShow";
+document.getElementById("fixNav").className = "textSlideShow";
+document.getElementById("hRight").className = "hRight";
+document.getElementById("hCenter").className = "hCenter";
+document.getElementById("accountBar").className = "accountBar";
+document.getElementById("cartBar").className = "cartBar";
+document.getElementById("hCenter").className = "hCenter";
+document.getElementById('searchIcon').style.display='none';
 }
-function showCart(toggle){
-	if(toggle=='showShopCart'){
-	document.getElementById("shopBar").style.visibility='visible';
-	//document.getElementById("shopBar").style.top='120px';
-	//document.getElementById("shopBar").style.zIndex='100';
-	//document.getElementById("shopBar").style.transition='1s top';
-	document.getElementById(toggle).id='closeShopCart';
-	}
-	else{
-	//document.getElementById("shopBar").style.transition='1s top';
-	//document.getElementById("shopBar").style.top='0';
-	//document.getElementById("shopBar").style.zIndex='100';
-	document.getElementById("shopBar").style.visibility='hidden';
-	document.getElementById(toggle).id='showShopCart';
-	}
-	document.getElementById('userBar').style.visibility='hidden';
-	document.getElementById('closeAccount').id='showAccount';
 }
-function showAccount(toggle){
-	if(toggle=='showAccount'){
-	document.getElementById("userBar").style.visibility='visible';
-	//document.getElementById("shopBar").style.top='120px';
-	//document.getElementById("shopBar").style.zIndex='100';
-	//document.getElementById("shopBar").style.transition='1s top';
-	document.getElementById(toggle).id='closeAccount';
-	}
-	else{
-	//document.getElementById("shopBar").style.transition='1s top';
-	//document.getElementById("shopBar").style.top='0';
-	//document.getElementById("shopBar").style.zIndex='100';
-	document.getElementById("userBar").style.visibility='hidden';
-	document.getElementById(toggle).id='showAccount';
-	}
-	document.getElementById('shopBar').style.visibility='hidden';
-	document.getElementById('closeShopCart').id='showShopCart';
+function showCart(){
+if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+	document.getElementById('cartBar').classList.toggle('fixedCartBar');
+	document.getElementById('accountBar').className= 'accountBar';
 }
-
-function closeCart() {
-document.getElementById("shopBar").style.visibility='hidden';
-document.getElementById('closeShopCart').id='showShopCart';
+else {
+	document.getElementById('cartBar').classList.toggle('toggleCartBar');
+	document.getElementById('accountBar').className= 'accountBar';
+}
+}
+function showAccount(){
+if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+	document.getElementById('accountBar').classList.toggle('fixedAccountBar');
+	document.getElementById('cartBar').className= 'cartBar';
+}
+else {
+	document.getElementById('accountBar').classList.toggle('toggleAccountBar');
+	document.getElementById('cartBar').className= 'cartBar';
+}
+}
+function showSearch(){
+document.getElementById('hCenter').classList.toggle('togglehCenter');
 }
 
 </script>
-	</body>
-	</html>
+</body>
+</html>
