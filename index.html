@@ -15,12 +15,12 @@
 </head>
 <body>
 <header>
+	<div class='responsiveMenuIcon'></div>
 	<div class="hLeft"><p>MahiFam</p></div>
 	<div id='hCenter' class="hCenter"><form action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
 	<div id='hRight' class="hRight">
 		<i id='showCart' onClick='showCart();' class="fas fa-shopping-cart"></i>
 		<div id='cartBar' class='cartBar'>
-			
 			<p>سبد خرید خالی می باشد</p>
 		</div>
 		<i id='showAccount' onClick='showAccount();' class="fas fa-user"></i>
@@ -79,8 +79,22 @@
 </footer>
 <script>
 window.onscroll = function() {myScroll()};
+window.onresize = function() {myResize()};
+
+function myResize(){
+var width = document.body.clientWidth;
+	if(width<=800){
+		document.getElementById('searchIcon').style.display='block';
+		document.getElementById("hCenter").className = "hCenter fixhCenter";
+	}
+	else{
+		document.getElementById('searchIcon').style.display='none';
+		document.getElementById("hCenter").className = "hCenter";
+	}
+}
 
 function myScroll() {
+	var width = document.body.clientWidth;
 if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
 document.getElementById("slide").className = "slideShow slideBlur";
 document.getElementById("fixNav").className = "textSlideShow fixNav";
@@ -91,11 +105,16 @@ document.getElementById('searchIcon').style.display='block';
 document.getElementById("slide").className = "slideShow";
 document.getElementById("fixNav").className = "textSlideShow";
 document.getElementById("hRight").className = "hRight";
-document.getElementById("hCenter").className = "hCenter";
 document.getElementById("accountBar").className = "accountBar";
 document.getElementById("cartBar").className = "cartBar";
-document.getElementById("hCenter").className = "hCenter";
-document.getElementById('searchIcon').style.display='none';
+	if(width<=800){
+		document.getElementById('searchIcon').style.display='block';
+		document.getElementById("hCenter").className = "hCenter fixhCenter";
+	}
+	else{
+		document.getElementById('searchIcon').style.display='none';
+		document.getElementById("hCenter").className = "hCenter";
+	}
 }
 }
 function showCart(){
@@ -119,6 +138,7 @@ else {
 }
 }
 function showSearch(){
+	//document.getElementById('hCenter').style.display='block';
 document.getElementById('hCenter').classList.toggle('togglehCenter');
 }
 
