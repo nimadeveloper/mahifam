@@ -14,9 +14,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
 </head>
 <body>
-<header>
-	<div class='responsiveMenuIcon'></div>
-	<div class="hLeft"><p>MahiFam</p></div>
+<header id='header' class='header'>
+	<div id='menuIcon' class='responsiveMenuIcon'><i onClick='showMenu();' class="fas fa-ellipsis-h"></i></div>
+	<div id='hLeft' class="hLeft"><p>MahiFam</p></div>
 	<div id='hCenter' class="hCenter"><form action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
 	<div id='hRight' class="hRight">
 		<i id='showCart' onClick='showCart();' class="fas fa-shopping-cart"></i>
@@ -29,18 +29,18 @@
 		</div>
 		<i id='searchIcon' onClick='showSearch();' class="fa fa-search" aria-hidden="true"></i>
 	</div>
-	<nav class="hNav">
+	<nav id='hNav' class="hNav hNavHover">
 		<ul>
 			<li><a href="index.html" title='main page'>صفحه اصلی</a></li>
-			<li><a href="#fish" title=''>ماهی آب شیرین</a></li>
-				<ul class='subMenu buyFish'>
+			<li id="Fish" onClick="showSubMenu(this.id);">ماهی آب شیرین</li>
+				<ul id='buyFish' class='subMenu fish'>
 					<li><a href="#" title=''>گوشتخوار</a></li>
 					<li><a href="#" title=''>گیاهخوار</a></li>
 				</ul>
-			<li><a href="" title=''>لوازم</a></li>
-				<ul class='subMenu accessories'>
+			<li id="Accessories" onClick="showSubMenu(this.id);">لوازم</li>
+				<ul id='buyAccessories' class='subMenu accessories'>
 					<li><a href="#" title=''>هیتر</a></li>
-					<li><a href="#" title=''>پمپ هوا</a></li>
+					<li><a href="#" title=''>پمپ</a></li>
 				</ul>
 			<li><a href="" title=''>اکواریوم و پایه</a></li>
 			<li><a href="" title=''>غذا و دارو</a></li>
@@ -51,7 +51,7 @@
 	</nav>
 <div id='fixNav' class='textSlideShow'><p>MahiFam</p><div></div></div>
 </header>
-<section>
+<section id='section'>
 	<div id='slide' class='slideShow'>
 	<img src="images/slide1.jpg" width='100%' height='auto'>
 	</div>
@@ -80,68 +80,229 @@
 <script>
 window.onscroll = function() {myScroll()};
 window.onresize = function() {myResize()};
+document.getElementsByTagName('section')[0].onclick = function() {bodyClick()};
+myResize();
 
 function myResize(){
 var width = document.body.clientWidth;
-	if(width<=800){
-		document.getElementById('searchIcon').style.display='block';
-		//document.getElementById("hCenter").className = "hCenter fixhCenter";
+var menuClick = document.querySelectorAll('.hNav > ul > li');
+			document.getElementById('accountBar').className= 'accountBar';
+			document.getElementById('cartBar').className= 'cartBar';
+	if(width<780){
+			document.getElementById('searchIcon').style.display='block';
+			document.getElementById('hNav').classList.remove('hNavHover');
+			document.getElementById("hLeft").classList.remove('hLeft');
+			document.getElementById("hLeft").classList.add('fixhLeft');
+			document.getElementById('hLeft').classList.remove('hide');
+			for(var i=1;i<menuClick.length;i++){
+				menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
+			}
 	}
 	else{
-		document.getElementById('searchIcon').style.display='none';
-		//document.getElementById("hCenter").className = "hCenter";
+		if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+			document.getElementById('searchIcon').style.display='block';
+			document.getElementById('header').classList.add('fixedHeader');
+			document.getElementById("hNav").classList.add('fixhNav');
+			document.getElementById("hRight").classList.add('fixhRight');
+			document.getElementById("hCenter").classList.add('fixhCenter');
+			document.getElementById("hLeft").classList.remove('hLeft');
+			document.getElementById("hLeft").classList.add('fixhLeft');
+			document.getElementById('hLeft').classList.add('hide');
+			document.getElementById('section').classList.remove('blur');
+			document.getElementById('menuIcon').classList.add('fixedMenuIcon');
+				for(var i=1;i<menuClick.length;i++){
+					menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
+				}
+			}
+		else{
+			document.getElementById('searchIcon').style.display='none';
+			document.getElementById('header').className ='header';
+			document.getElementById('hNav').className= 'hNav';
+			document.getElementById('hCenter').className='hCenter';
+			document.getElementById("hLeft").className = "hLeft";
+			document.getElementById("hRight").className = "hRight";
+			document.getElementById('section').classList.remove('blur');
+			document.getElementById('hNav').classList.add('hNavHover');
+			document.getElementById('menuIcon').classList.remove('fixedMenuIcon');
+			var showSubMenu = document.getElementsByClassName('subMenu');
+			for(var i=1;i<menuClick.length;i++){
+				menuClick[i].removeAttribute('onclick');
+			}
+
+			for(var i=0;i<showSubMenu.length;i++){
+				if(showSubMenu[i].classList.contains('showSubMenu')){
+					showSubMenu[i].classList.toggle('showSubMenu');
+				}
+			}
+		}
 	}
 }
 
 function myScroll() {
 	var width = document.body.clientWidth;
-if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-document.getElementById("slide").className = "slideShow slideBlur";
-document.getElementById("fixNav").className = "textSlideShow fixNav";
-document.getElementById("hRight").className = "hRight fixhRight";
-document.getElementById("hCenter").className = "hCenter fixhCenter";
-document.getElementById('searchIcon').style.display='block';
-} else {
-document.getElementById("slide").className = "slideShow";
-document.getElementById("fixNav").className = "textSlideShow";
-document.getElementById("hRight").className = "hRight";
-document.getElementById("accountBar").className = "accountBar";
-document.getElementById("cartBar").className = "cartBar";
-	if(width<=800){
-		document.getElementById('searchIcon').style.display='block';
-		document.getElementById("hCenter").className = "hCenter fixhCenter";
+	var showSubMenu = document.getElementsByClassName('subMenu');
+	var menuClick = document.querySelectorAll('.hNav > ul > li');
+		for(var i=0;i<showSubMenu.length;i++){
+			if(showSubMenu[i].classList.contains('showSubMenu')){
+				showSubMenu[i].classList.toggle('showSubMenu');
+			}
+		}
+	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+			//document.getElementById('header').classList.add('fixedHeader');
+			//document.getElementById("hNav").classList.remove('hNav');
+			//document.getElementById("hNav").classList.add('fixhNav');
+			document.getElementById("hRight").classList.add('fixhRight');
+			document.getElementById("hCenter").classList.add('fixhCenter');
+			document.getElementById("hLeft").classList.remove('hLeft');
+			document.getElementById("hLeft").classList.add('fixhLeft');
+			for(var i=1;i<menuClick.length;i++){
+				menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
+			}
+
+		if(width>800){
+			document.getElementById("slide").classList.add('slideBlur');
+			document.getElementById("fixNav").className = "textSlideShow fixNav";
+			document.getElementById('menuIcon').classList.add('fixedMenuIcon');
+			document.getElementById('searchIcon').style.display='block';
+			document.getElementById('hNav').classList.remove('hNavHover');
+			document.getElementById('hLeft').classList.add('hide');
+		}
+		else{
+			document.getElementById('searchIcon').style.display='block';
+			//document.getElementById('menuIcon').style.display='block';
+		}
 	}
-	else{
-		document.getElementById('searchIcon').style.display='none';
-		document.getElementById("hCenter").className = "hCenter";
+	else {
+			document.getElementById("slide").className = "slideShow";
+			document.getElementById("fixNav").className = "textSlideShow";
+			document.getElementById("accountBar").className = "accountBar";
+			document.getElementById("cartBar").className = "cartBar";
+		if(width<=800){
+			document.getElementById('searchIcon').style.display='block';
+			document.getElementById("hCenter").classList.add('fixhCenter');
+		}
+		else{
+			document.getElementById('searchIcon').style.display='none';
+			document.getElementById('header').className ='header';
+			document.getElementById('hNav').classList.remove('fixhNav');
+			document.getElementById('hNav').classList.remove('toggleMenu');
+			document.getElementById('hNav').classList.add('hNav');
+			document.getElementById("hCenter").className = "hCenter";
+			document.getElementById("hLeft").className = "hLeft";
+			document.getElementById("hRight").className = "hRight";
+			document.getElementById('menuIcon').classList.remove('fixedMenuIcon');
+			document.getElementById('section').classList.remove('blur');
+			document.getElementById('hNav').classList.add('hNavHover');
+			for(var i=1;i<menuClick.length;i++){
+				menuClick[i].removeAttribute('onclick');
+			}
+
+		}
 	}
-}
 }
 function showCart(){
-if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-	document.getElementById('cartBar').classList.toggle('fixedCartBar');
-	document.getElementById('accountBar').className= 'accountBar';
-}
+	var width = document.body.clientWidth;
+	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+		document.getElementById('cartBar').classList.toggle('fixedCartBar');
+		document.getElementById('accountBar').className= 'accountBar';
+		//document.getElementById('hNav').classList.add('hNavHover');
+		document.getElementById('hNav').className= 'hNav';
+		document.getElementById('section').classList.remove('blur');
+	}
 else {
-	document.getElementById('cartBar').classList.toggle('toggleCartBar');
-	document.getElementById('accountBar').className= 'accountBar';
-}
+		if(width>800){
+			document.getElementById('cartBar').classList.toggle('toggleCartBar');
+		}
+		else{
+			document.getElementById('cartBar').classList.toggle('fixedCartBar');
+		}
+		//console.log(document.getElementById('cartBar'));
+		document.getElementById('accountBar').className= 'accountBar';
+		document.getElementById('hNav').className= 'hNav';
+		document.getElementById('hNav').classList.add('hNavHover');
+		document.getElementById('section').classList.remove('blur');
+	}
 }
 function showAccount(){
-if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-	document.getElementById('accountBar').classList.toggle('fixedAccountBar');
-	document.getElementById('cartBar').className= 'cartBar';
-}
-else {
-	document.getElementById('accountBar').classList.toggle('toggleAccountBar');
-	document.getElementById('cartBar').className= 'cartBar';
-}
-}
-function showSearch(){
-	//document.getElementById('hCenter').style.display='block';
-document.getElementById('hCenter').classList.toggle('togglehCenter');
+	var width = document.body.clientWidth;
+	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+		document.getElementById('accountBar').classList.toggle('fixedAccountBar');
+		document.getElementById('cartBar').className= 'cartBar';
+		//document.getElementById('hNav').classList.add('hNavHover');
+		document.getElementById('hNav').className= 'hNav';
+		document.getElementById('section').classList.remove('blur');
+	}
+	else {
+			if(width>800){
+			document.getElementById('accountBar').classList.toggle('toggleAccountBar');
+			}
+			else{
+			document.getElementById('accountBar').classList.toggle('fixedAccountBar');
+			}
+		document.getElementById('cartBar').className= 'cartBar';
+		document.getElementById('hNav').className= 'hNav';
+		document.getElementById('section').classList.remove('blur');
+		document.getElementById('hNav').classList.add('hNavHover');
+	}
 }
 
+function showSearch(){
+	document.getElementById('hCenter').classList.toggle('togglehCenter');
+	document.getElementById("accountBar").className = "accountBar";
+	document.getElementById("cartBar").className = "cartBar";
+}
+
+function showMenu(){
+	var section = document.getElementById('section');
+	var menu = document.getElementById('hNav');
+	menu.classList.remove('hNavHover');
+	menu.classList.toggle('toggleMenu');
+	document.getElementById("accountBar").className = "accountBar";
+	document.getElementById("cartBar").className = "cartBar";
+	if(section.classList.contains('blur')){
+		section.classList.remove('blur');
+	}
+	else {
+		section.classList.add('blur');
+	}
+}
+function showSubMenu(id) {
+	var myId= 'buy' + id;
+	var showSubMenu = document.getElementsByClassName('subMenu');
+	if(document.getElementById(myId).classList.contains('showSubMenu')){
+		document.getElementById(myId).classList.toggle('showSubMenu');
+	}
+	else{
+		for(var i=0;i<showSubMenu.length;i++){
+			if(showSubMenu[i].classList.contains('showSubMenu')){
+				showSubMenu[i].classList.toggle('showSubMenu');
+				console.log(showSubMenu);
+			}
+		}
+		document.getElementById(myId).classList.toggle('showSubMenu');
+	}
+}
+
+function bodyClick() {
+	var showSubMenu = document.getElementsByClassName('subMenu');
+	for(var i=0;i<showSubMenu.length;i++){
+		if(showSubMenu[i].classList.contains('showSubMenu')){
+			showSubMenu[i].classList.toggle('showSubMenu');
+		}
+	}
+	document.getElementById("accountBar").className = "accountBar";
+	document.getElementById("cartBar").className = "cartBar";
+	document.getElementById('hNav').className='hNav';
+	document.getElementById('section').classList.remove('blur');
+	document.getElementById('hNav').classList.add('hNavHover');
+	document.getElementById('hCenter').classList.remove('togglehCenter');
+	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+		document.getElementById("hCenter").classList.add('fixhCenter');
+	}
+	else{
+		document.getElementById("hCenter").classList.remove('fixhCenter');
+	}
+}
 </script>
 </body>
 </html>
