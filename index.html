@@ -15,10 +15,10 @@
 </head>
 <body>
 <header id='header' class='header'>
-	<div id='menuIcon' class='responsiveMenuIcon'><i onClick='showMenu();' class="fas fa-ellipsis-h"></i></div>
-	<div id='hLeft' class="hLeft"><p>MahiFam</p></div>
-	<div id='hCenter' class="hCenter"><form action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
-	<div id='hRight' class="hRight">
+	<div id='menuIcon' class='menuIcon'><i onClick='showMenu();' class="fas fa-ellipsis-h"></i></div>
+	<div id='hLogo' class="hLogo"><p>MahiFam</p></div>
+	<div  class="hSearch"><form id='hSearch' action=""><input type="search" ><input type="submit" value="جستجو"></form></div>
+	<div id='hIcons' class="hIcons">
 		<i id='showCart' onClick='showCart();' class="fas fa-shopping-cart"></i>
 		<div id='cartBar' class='cartBar'>
 			<p>سبد خرید خالی می باشد</p>
@@ -34,40 +34,46 @@
 			<li><a href="index.html" title='main page'>صفحه اصلی</a></li>
 			<li id="Fish" onClick="showSubMenu(this.id);">ماهی آب شیرین</li>
 				<ul id='buyFish' class='subMenu fish'>
-					<li><a href="#" title=''>گوشتخوار</a></li>
-					<li><a href="#" title=''>گیاهخوار</a></li>
+					<li><a href="#hello" title=''>گوشتخوار</a></li>
+					<li><a href="#bye" title=''>گیاهخوار</a></li>
 				</ul>
-			<li id="Accessories" onClick="showSubMenu(this.id);">لوازم</li>
+			<li id="Accessories" onClick="showSubMenu(this.id);">لوازم آکواریوم</li>
 				<ul id='buyAccessories' class='subMenu accessories'>
+					<li><a href="#salam" title=''>هیتر</a></li>
+					<li><a href="#hafez" title=''>پمپ</a></li>
+				</ul>
+			<li id="Aqua" onClick="showSubMenu(this.id);">اکواریوم و پایه</li>
+				<ul id='buyAqua' class='subMenu aqua'>
+					<li><a href="#" title=''>هیتر</a></li>
+					<li><a href="#" title=''>پمپ</a></li>
 					<li><a href="#" title=''>هیتر</a></li>
 					<li><a href="#" title=''>پمپ</a></li>
 				</ul>
-			<li><a href="" title=''>اکواریوم و پایه</a></li>
 			<li><a href="" title=''>غذا و دارو</a></li>
 			<li><a href="" title=''>دکوراسیون</a></li>
 			<li><a href="" title=''>گیاه</a></li>
 			<li><a href="" title=''>پشتیبانی</a></li>
 		</ul>
 	</nav>
-<div id='fixNav' class='textSlideShow'><p>MahiFam</p><div></div></div>
 </header>
 <section id='section'>
+	<div id='textSlideShow' class='textSlideShow'><p>MahiFam</p></div>
 	<div id='slide' class='slideShow'>
 	<img src="images/slide1.jpg" width='100%' height='auto'>
 	</div>
-	<div class="txtSection1">
+	<div class="txtSection">
 		<h1>فروش ماهی های زینتی و لوازم اکواریوم در فروشگاه ماهیفام</h1>
 		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
 	</div>
 	<div class="imgSection imgSection1">
 	</div>
-	<div class="txtSection1">
+	<div class="txtSection">
 		<h2>طراحی و ساخت و پیاده سازی انواع اکواریوم </h2>
 		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
 	</div>
 	<div class="imgSection imgSection2">
 	</div>
-	<div class="txtSection1">
+	<div class="txtSection">
 		<h2>طراحی و پیاده سازی اکواریوم پلنت</h2>
 		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
 	</div>
@@ -75,70 +81,97 @@
 	</div>
 </section>
 <footer>
-	
+		<div class='subscriberText'>
+			<h5>جهت دریافت خبر نامه ایمیل خود را وارد نمایید</h5>
+		</div>
+		<div class='subscriber'>
+			<form action=""><input type="email" placeholder="E-Mail" ><input type="submit" value="Send"></form>
+		</div>
+		<div class='social'>
+			<a href="https://www.facebook.com/" title="Facebook" id="facebook"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://telegram.me/" title="Telegram" id="telegram"><i class="fa fa-paper-plane"></i></a>
+			<a href="https://www.instagram.com/" title="Instagram" id="instagram"><i class="fab fa-instagram"></i></a>
+			<a href="https://plus.google.com/" title="Google plus" id="google"><i class="fab fa-google-plus-g"></i></a>
+		</div>
+	<div class='logo'>
+		<img src="images/logo.svg" width='200px' height='100px' alt='logo'>
+	</div>
+	<div class='footerBottom'>
+		<div class='linkText'><p>پشتیبانی تیم ماهی فام</p></div>
+		<div class='link'>
+			<a href="" title='تماس با ما'>تماس با ما</a>
+			<a href="" title='درباره ما'>درباره ما</a>
+			<a href="" title='شکایات'>شکایات</a>
+			<a href="" title='قوانین و مقررات'>قوانین و مقررات</a>
+		</div>
+	</div>
 </footer>
 <script>
+//window.onload = function() {myResize()};
 window.onscroll = function() {myScroll()};
 window.onresize = function() {myResize()};
-document.getElementsByTagName('section')[0].onclick = function() {bodyClick()};
-myResize();
+document.getElementsByTagName('section')[0].addEventListener('click',function() {bodyClick()} );
 
-function myResize(){
-var width = document.body.clientWidth;
+myResize = () => {
+var width = window.innerWidth;
 var menuClick = document.querySelectorAll('.hNav > ul > li');
+var showSubMenu = document.getElementsByClassName('subMenu');
+	for(var i=0;i<showSubMenu.length;i++){
+		if(showSubMenu[i].classList.contains('showSubMenu')){
+			showSubMenu[i].classList.toggle('showSubMenu');
+		}
+	}
+	if(width<=800){
 			document.getElementById('accountBar').className= 'accountBar';
 			document.getElementById('cartBar').className= 'cartBar';
-	if(width<780){
-			document.getElementById('searchIcon').style.display='block';
-			document.getElementById('hNav').classList.remove('hNavHover');
-			document.getElementById("hLeft").classList.remove('hLeft');
-			document.getElementById("hLeft").classList.add('fixhLeft');
-			document.getElementById('hLeft').classList.remove('hide');
-			for(var i=1;i<menuClick.length;i++){
-				menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
-			}
+			document.getElementById('hNav').removeAttribute('class');
+			document.getElementById('hNav').classList.add('fixhNav');
+			document.getElementById('section').classList.remove('blur');
+			document.getElementById('hLogo').removeAttribute('class');
+			document.getElementById('hLogo').classList.add('fixhLogo');
+			document.getElementById("hSearch").classList.add('fixhSearch');
+			document.getElementById("textSlideShow").style.display = 'none';
+			document.querySelector('.subscriber input').setAttribute('placeholder','عضویت در خبرنامه');
+				for(var i=1;i<menuClick.length;i++){
+					menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
+				}
 	}
 	else{
-		if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-			document.getElementById('searchIcon').style.display='block';
-			document.getElementById('header').classList.add('fixedHeader');
-			document.getElementById("hNav").classList.add('fixhNav');
-			document.getElementById("hRight").classList.add('fixhRight');
-			document.getElementById("hCenter").classList.add('fixhCenter');
-			document.getElementById("hLeft").classList.remove('hLeft');
-			document.getElementById("hLeft").classList.add('fixhLeft');
-			document.getElementById('hLeft').classList.add('hide');
+		document.querySelector('.subscriber input').setAttribute('placeholder','E-Mail');
+		if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+			document.getElementById('hNav').removeAttribute('class');
+			document.getElementById('hNav').classList.add('fixhNav');
+			
+			document.getElementById("hIcons").classList.add('fixhIcons');
+			document.getElementById("hSearch").classList.add('fixhSearch');
+			document.getElementById("hLogo").classList.remove('hLogo');
+			document.getElementById("hLogo").classList.add('fixhLogo');
 			document.getElementById('section').classList.remove('blur');
 			document.getElementById('menuIcon').classList.add('fixedMenuIcon');
 				for(var i=1;i<menuClick.length;i++){
 					menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
 				}
-			}
+		}
 		else{
 			document.getElementById('searchIcon').style.display='none';
-			document.getElementById('header').className ='header';
-			document.getElementById('hNav').className= 'hNav';
-			document.getElementById('hCenter').className='hCenter';
-			document.getElementById("hLeft").className = "hLeft";
-			document.getElementById("hRight").className = "hRight";
+			document.getElementById('hNav').removeAttribute('class');
+			document.getElementById('hNav').classList.add('hNav');
+			document.querySelector('#hSearch').removeAttribute('class');
+			document.getElementById("hLogo").className = "hLogo";
+			document.getElementById("hIcons").className = "hIcons";
 			document.getElementById('section').classList.remove('blur');
 			document.getElementById('hNav').classList.add('hNavHover');
 			document.getElementById('menuIcon').classList.remove('fixedMenuIcon');
-			var showSubMenu = document.getElementsByClassName('subMenu');
+			document.getElementById("textSlideShow").style.display = 'block';
+			///for menu
 			for(var i=1;i<menuClick.length;i++){
 				menuClick[i].removeAttribute('onclick');
-			}
-
-			for(var i=0;i<showSubMenu.length;i++){
-				if(showSubMenu[i].classList.contains('showSubMenu')){
-					showSubMenu[i].classList.toggle('showSubMenu');
-				}
 			}
 		}
 	}
 }
 
-function myScroll() {
+myScroll = () => {
 	var width = document.body.clientWidth;
 	var showSubMenu = document.getElementsByClassName('subMenu');
 	var menuClick = document.querySelectorAll('.hNav > ul > li');
@@ -148,51 +181,53 @@ function myScroll() {
 			}
 		}
 	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-			//document.getElementById('header').classList.add('fixedHeader');
-			//document.getElementById("hNav").classList.remove('hNav');
-			//document.getElementById("hNav").classList.add('fixhNav');
-			document.getElementById("hRight").classList.add('fixhRight');
-			document.getElementById("hCenter").classList.add('fixhCenter');
-			document.getElementById("hLeft").classList.remove('hLeft');
-			document.getElementById("hLeft").classList.add('fixhLeft');
+			document.getElementById("hNav").classList.remove('hNav');
+			document.getElementById("hNav").classList.add('fixhNav');
+			document.getElementById("hIcons").classList.add('fixhIcons');
+			document.getElementById("hSearch").classList.add('fixhSearch');
+			document.getElementById("hLogo").classList.remove('hLogo');
+			document.getElementById("hLogo").classList.add('fixhLogo');
+			document.getElementById("textSlideShow").style.display = 'none';
 			for(var i=1;i<menuClick.length;i++){
 				menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
 			}
 
 		if(width>800){
 			document.getElementById("slide").classList.add('slideBlur');
-			document.getElementById("fixNav").className = "textSlideShow fixNav";
 			document.getElementById('menuIcon').classList.add('fixedMenuIcon');
 			document.getElementById('searchIcon').style.display='block';
 			document.getElementById('hNav').classList.remove('hNavHover');
-			document.getElementById('hLeft').classList.add('hide');
 		}
 		else{
 			document.getElementById('searchIcon').style.display='block';
-			//document.getElementById('menuIcon').style.display='block';
 		}
 	}
 	else {
 			document.getElementById("slide").className = "slideShow";
-			document.getElementById("fixNav").className = "textSlideShow";
 			document.getElementById("accountBar").className = "accountBar";
 			document.getElementById("cartBar").className = "cartBar";
-		if(width<=800){
-			document.getElementById('searchIcon').style.display='block';
-			document.getElementById("hCenter").classList.add('fixhCenter');
+		if(width <= 800){
+			document.getElementById('searchIcon').style.display = 'block';
+			document.getElementById("hSearch").classList.add('fixhSearch');
 		}
 		else{
 			document.getElementById('searchIcon').style.display='none';
-			document.getElementById('header').className ='header';
+			document.getElementById("textSlideShow").style.display  = 'block';
 			document.getElementById('hNav').classList.remove('fixhNav');
 			document.getElementById('hNav').classList.remove('toggleMenu');
 			document.getElementById('hNav').classList.add('hNav');
-			document.getElementById("hCenter").className = "hCenter";
-			document.getElementById("hLeft").className = "hLeft";
-			document.getElementById("hRight").className = "hRight";
+			document.querySelector('#hSearch').removeAttribute('class');
+			document.getElementById("hLogo").className = "hLogo";
+			document.getElementById("hIcons").className = "hIcons";
 			document.getElementById('menuIcon').classList.remove('fixedMenuIcon');
 			document.getElementById('section').classList.remove('blur');
 			document.getElementById('hNav').classList.add('hNavHover');
+			/*for sub menu
+			var subMenuLi = document.querySelectorAll('.subMenu > li');
+			for(var j=0;j<subMenuLi.length;j++){
+				subMenuLi[j].style.height ='40px';
+			}*/
+			///for menu
 			for(var i=1;i<menuClick.length;i++){
 				menuClick[i].removeAttribute('onclick');
 			}
@@ -200,8 +235,9 @@ function myScroll() {
 		}
 	}
 }
-function showCart(){
+showCart = () => {
 	var width = document.body.clientWidth;
+	console.log(document.getElementById('cartBar'));
 	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
 		document.getElementById('cartBar').classList.toggle('fixedCartBar');
 		document.getElementById('accountBar').className= 'accountBar';
@@ -216,14 +252,14 @@ else {
 		else{
 			document.getElementById('cartBar').classList.toggle('fixedCartBar');
 		}
-		//console.log(document.getElementById('cartBar'));
+		
 		document.getElementById('accountBar').className= 'accountBar';
 		document.getElementById('hNav').className= 'hNav';
 		document.getElementById('hNav').classList.add('hNavHover');
 		document.getElementById('section').classList.remove('blur');
 	}
 }
-function showAccount(){
+showAccount = () => {
 	var width = document.body.clientWidth;
 	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
 		document.getElementById('accountBar').classList.toggle('fixedAccountBar');
@@ -246,15 +282,21 @@ function showAccount(){
 	}
 }
 
-function showSearch(){
-	document.getElementById('hCenter').classList.toggle('togglehCenter');
+showSearch = () => {
+	document.getElementById('hSearch').classList.toggle('togglehSearch');
 	document.getElementById("accountBar").className = "accountBar";
 	document.getElementById("cartBar").className = "cartBar";
 }
 
-function showMenu(){
+showMenu = () => {
 	var section = document.getElementById('section');
 	var menu = document.getElementById('hNav');
+	var showSubMenu = document.getElementsByClassName('subMenu');
+		for(var i=0;i<showSubMenu.length;i++){
+			if(showSubMenu[i].classList.contains('showSubMenu')){
+				showSubMenu[i].classList.toggle('showSubMenu');
+			}
+		}
 	menu.classList.remove('hNavHover');
 	menu.classList.toggle('toggleMenu');
 	document.getElementById("accountBar").className = "accountBar";
@@ -266,7 +308,8 @@ function showMenu(){
 		section.classList.add('blur');
 	}
 }
-function showSubMenu(id) {
+showSubMenu = (id) => {
+	console.log(document.getElementById('buyFish'));
 	var myId= 'buy' + id;
 	var showSubMenu = document.getElementsByClassName('subMenu');
 	if(document.getElementById(myId).classList.contains('showSubMenu')){
@@ -276,14 +319,14 @@ function showSubMenu(id) {
 		for(var i=0;i<showSubMenu.length;i++){
 			if(showSubMenu[i].classList.contains('showSubMenu')){
 				showSubMenu[i].classList.toggle('showSubMenu');
-				console.log(showSubMenu);
 			}
 		}
 		document.getElementById(myId).classList.toggle('showSubMenu');
 	}
 }
 
-function bodyClick() {
+bodyClick = () => {
+	var width = document.body.clientWidth;
 	var showSubMenu = document.getElementsByClassName('subMenu');
 	for(var i=0;i<showSubMenu.length;i++){
 		if(showSubMenu[i].classList.contains('showSubMenu')){
@@ -292,16 +335,20 @@ function bodyClick() {
 	}
 	document.getElementById("accountBar").className = "accountBar";
 	document.getElementById("cartBar").className = "cartBar";
-	document.getElementById('hNav').className='hNav';
-	document.getElementById('section').classList.remove('blur');
-	document.getElementById('hNav').classList.add('hNavHover');
-	document.getElementById('hCenter').classList.remove('togglehCenter');
-	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-		document.getElementById("hCenter").classList.add('fixhCenter');
+
+	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150){
+	document.getElementById('hNav').removeAttribute('class');
+	document.getElementById('hNav').classList.add('fixhNav');
 	}
 	else{
-		document.getElementById("hCenter").classList.remove('fixhCenter');
+	document.getElementById('hNav').removeAttribute('class');
+	document.getElementById('hNav').classList.add('hNav');
 	}
+
+	
+	document.getElementById('section').classList.remove('blur');
+	document.getElementById('hNav').classList.add('hNavHover');
+	document.getElementById('hSearch').classList.remove('togglehSearch');
 }
 </script>
 </body>
