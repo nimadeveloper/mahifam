@@ -59,7 +59,7 @@
 <section id='section'>
 	<div id='textSlideShow' class='textSlideShow'><p>MahiFam</p></div>
 	<div id='slide' class='slideShow'>
-	<img src="images/slide1.jpg" width='100%' height='auto'>
+	<img src="images/slide.jpg" width='100%' height='auto'>
 	</div>
 	<div class="txtSection">
 		<h1>فروش ماهی های زینتی و لوازم اکواریوم در فروشگاه ماهیفام</h1>
@@ -71,7 +71,8 @@
 		<h2>طراحی و ساخت و پیاده سازی انواع اکواریوم </h2>
 		<p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می‌باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را برای طراحان رایانه ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می‌توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساساً مورد استفاده قرار گیرد</p>
 	</div>
-	<div class="imgSection imgSection2">
+	<div class="imgSection2">
+		<img src="images/imgsection2.jpg">
 	</div>
 	<div class="txtSection">
 		<h2>طراحی و پیاده سازی اکواریوم پلنت</h2>
@@ -93,7 +94,7 @@
 			<a href="https://www.instagram.com/" title="Instagram" id="instagram"><i class="fab fa-instagram"></i></a>
 			<a href="https://plus.google.com/" title="Google plus" id="google"><i class="fab fa-google-plus-g"></i></a>
 		</div>
-	<div class='logo'>
+	<div class='fLogo'>
 		<img src="images/logo.svg" width='200px' height='100px' alt='logo'>
 	</div>
 	<div class='footerBottom'>
@@ -106,250 +107,6 @@
 		</div>
 	</div>
 </footer>
-<script>
-//window.onload = function() {myResize()};
-window.onscroll = function() {myScroll()};
-window.onresize = function() {myResize()};
-document.getElementsByTagName('section')[0].addEventListener('click',function() {bodyClick()} );
-
-myResize = () => {
-var width = window.innerWidth;
-var menuClick = document.querySelectorAll('.hNav > ul > li');
-var showSubMenu = document.getElementsByClassName('subMenu');
-	for(var i=0;i<showSubMenu.length;i++){
-		if(showSubMenu[i].classList.contains('showSubMenu')){
-			showSubMenu[i].classList.toggle('showSubMenu');
-		}
-	}
-	if(width<=800){
-			document.getElementById('accountBar').className= 'accountBar';
-			document.getElementById('cartBar').className= 'cartBar';
-			document.getElementById('hNav').removeAttribute('class');
-			document.getElementById('hNav').classList.add('fixhNav');
-			document.getElementById('section').classList.remove('blur');
-			document.getElementById('hLogo').removeAttribute('class');
-			document.getElementById('hLogo').classList.add('fixhLogo');
-			document.getElementById("hSearch").classList.add('fixhSearch');
-			document.getElementById("textSlideShow").style.display = 'none';
-			document.querySelector('.subscriber input').setAttribute('placeholder','عضویت در خبرنامه');
-				for(var i=1;i<menuClick.length;i++){
-					menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
-				}
-	}
-	else{
-		document.querySelector('.subscriber input').setAttribute('placeholder','E-Mail');
-		if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-			document.getElementById('hNav').removeAttribute('class');
-			document.getElementById('hNav').classList.add('fixhNav');
-			
-			document.getElementById("hIcons").classList.add('fixhIcons');
-			document.getElementById("hSearch").classList.add('fixhSearch');
-			document.getElementById("hLogo").classList.remove('hLogo');
-			document.getElementById("hLogo").classList.add('fixhLogo');
-			document.getElementById('section').classList.remove('blur');
-			document.getElementById('menuIcon').classList.add('fixedMenuIcon');
-				for(var i=1;i<menuClick.length;i++){
-					menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
-				}
-		}
-		else{
-			document.getElementById('searchIcon').style.display='none';
-			document.getElementById('hNav').removeAttribute('class');
-			document.getElementById('hNav').classList.add('hNav');
-			document.querySelector('#hSearch').removeAttribute('class');
-			document.getElementById("hLogo").className = "hLogo";
-			document.getElementById("hIcons").className = "hIcons";
-			document.getElementById('section').classList.remove('blur');
-			document.getElementById('hNav').classList.add('hNavHover');
-			document.getElementById('menuIcon').classList.remove('fixedMenuIcon');
-			document.getElementById("textSlideShow").style.display = 'block';
-			///for menu
-			for(var i=1;i<menuClick.length;i++){
-				menuClick[i].removeAttribute('onclick');
-			}
-		}
-	}
-}
-
-myScroll = () => {
-	var width = document.body.clientWidth;
-	var showSubMenu = document.getElementsByClassName('subMenu');
-	var menuClick = document.querySelectorAll('.hNav > ul > li');
-		for(var i=0;i<showSubMenu.length;i++){
-			if(showSubMenu[i].classList.contains('showSubMenu')){
-				showSubMenu[i].classList.toggle('showSubMenu');
-			}
-		}
-	if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-			document.getElementById("hNav").classList.remove('hNav');
-			document.getElementById("hNav").classList.add('fixhNav');
-			document.getElementById("hIcons").classList.add('fixhIcons');
-			document.getElementById("hSearch").classList.add('fixhSearch');
-			document.getElementById("hLogo").classList.remove('hLogo');
-			document.getElementById("hLogo").classList.add('fixhLogo');
-			document.getElementById("textSlideShow").style.display = 'none';
-			for(var i=1;i<menuClick.length;i++){
-				menuClick[i].setAttribute('onclick','showSubMenu(this.id)');
-			}
-
-		if(width>800){
-			document.getElementById("slide").classList.add('slideBlur');
-			document.getElementById('menuIcon').classList.add('fixedMenuIcon');
-			document.getElementById('searchIcon').style.display='block';
-			document.getElementById('hNav').classList.remove('hNavHover');
-		}
-		else{
-			document.getElementById('searchIcon').style.display='block';
-		}
-	}
-	else {
-			document.getElementById("slide").className = "slideShow";
-			document.getElementById("accountBar").className = "accountBar";
-			document.getElementById("cartBar").className = "cartBar";
-		if(width <= 800){
-			document.getElementById('searchIcon').style.display = 'block';
-			document.getElementById("hSearch").classList.add('fixhSearch');
-		}
-		else{
-			document.getElementById('searchIcon').style.display='none';
-			document.getElementById("textSlideShow").style.display  = 'block';
-			document.getElementById('hNav').classList.remove('fixhNav');
-			document.getElementById('hNav').classList.remove('toggleMenu');
-			document.getElementById('hNav').classList.add('hNav');
-			document.querySelector('#hSearch').removeAttribute('class');
-			document.getElementById("hLogo").className = "hLogo";
-			document.getElementById("hIcons").className = "hIcons";
-			document.getElementById('menuIcon').classList.remove('fixedMenuIcon');
-			document.getElementById('section').classList.remove('blur');
-			document.getElementById('hNav').classList.add('hNavHover');
-			/*for sub menu
-			var subMenuLi = document.querySelectorAll('.subMenu > li');
-			for(var j=0;j<subMenuLi.length;j++){
-				subMenuLi[j].style.height ='40px';
-			}*/
-			///for menu
-			for(var i=1;i<menuClick.length;i++){
-				menuClick[i].removeAttribute('onclick');
-			}
-
-		}
-	}
-}
-showCart = () => {
-	var width = document.body.clientWidth;
-	console.log(document.getElementById('cartBar'));
-	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-		document.getElementById('cartBar').classList.toggle('fixedCartBar');
-		document.getElementById('accountBar').className= 'accountBar';
-		//document.getElementById('hNav').classList.add('hNavHover');
-		document.getElementById('hNav').className= 'hNav';
-		document.getElementById('section').classList.remove('blur');
-	}
-else {
-		if(width>800){
-			document.getElementById('cartBar').classList.toggle('toggleCartBar');
-		}
-		else{
-			document.getElementById('cartBar').classList.toggle('fixedCartBar');
-		}
-		
-		document.getElementById('accountBar').className= 'accountBar';
-		document.getElementById('hNav').className= 'hNav';
-		document.getElementById('hNav').classList.add('hNavHover');
-		document.getElementById('section').classList.remove('blur');
-	}
-}
-showAccount = () => {
-	var width = document.body.clientWidth;
-	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-		document.getElementById('accountBar').classList.toggle('fixedAccountBar');
-		document.getElementById('cartBar').className= 'cartBar';
-		//document.getElementById('hNav').classList.add('hNavHover');
-		document.getElementById('hNav').className= 'hNav';
-		document.getElementById('section').classList.remove('blur');
-	}
-	else {
-			if(width>800){
-			document.getElementById('accountBar').classList.toggle('toggleAccountBar');
-			}
-			else{
-			document.getElementById('accountBar').classList.toggle('fixedAccountBar');
-			}
-		document.getElementById('cartBar').className= 'cartBar';
-		document.getElementById('hNav').className= 'hNav';
-		document.getElementById('section').classList.remove('blur');
-		document.getElementById('hNav').classList.add('hNavHover');
-	}
-}
-
-showSearch = () => {
-	document.getElementById('hSearch').classList.toggle('togglehSearch');
-	document.getElementById("accountBar").className = "accountBar";
-	document.getElementById("cartBar").className = "cartBar";
-}
-
-showMenu = () => {
-	var section = document.getElementById('section');
-	var menu = document.getElementById('hNav');
-	var showSubMenu = document.getElementsByClassName('subMenu');
-		for(var i=0;i<showSubMenu.length;i++){
-			if(showSubMenu[i].classList.contains('showSubMenu')){
-				showSubMenu[i].classList.toggle('showSubMenu');
-			}
-		}
-	menu.classList.remove('hNavHover');
-	menu.classList.toggle('toggleMenu');
-	document.getElementById("accountBar").className = "accountBar";
-	document.getElementById("cartBar").className = "cartBar";
-	if(section.classList.contains('blur')){
-		section.classList.remove('blur');
-	}
-	else {
-		section.classList.add('blur');
-	}
-}
-showSubMenu = (id) => {
-	console.log(document.getElementById('buyFish'));
-	var myId= 'buy' + id;
-	var showSubMenu = document.getElementsByClassName('subMenu');
-	if(document.getElementById(myId).classList.contains('showSubMenu')){
-		document.getElementById(myId).classList.toggle('showSubMenu');
-	}
-	else{
-		for(var i=0;i<showSubMenu.length;i++){
-			if(showSubMenu[i].classList.contains('showSubMenu')){
-				showSubMenu[i].classList.toggle('showSubMenu');
-			}
-		}
-		document.getElementById(myId).classList.toggle('showSubMenu');
-	}
-}
-
-bodyClick = () => {
-	var width = document.body.clientWidth;
-	var showSubMenu = document.getElementsByClassName('subMenu');
-	for(var i=0;i<showSubMenu.length;i++){
-		if(showSubMenu[i].classList.contains('showSubMenu')){
-			showSubMenu[i].classList.toggle('showSubMenu');
-		}
-	}
-	document.getElementById("accountBar").className = "accountBar";
-	document.getElementById("cartBar").className = "cartBar";
-
-	if(document.body.scrollTop > 150 || document.documentElement.scrollTop > 150){
-	document.getElementById('hNav').removeAttribute('class');
-	document.getElementById('hNav').classList.add('fixhNav');
-	}
-	else{
-	document.getElementById('hNav').removeAttribute('class');
-	document.getElementById('hNav').classList.add('hNav');
-	}
-
-	
-	document.getElementById('section').classList.remove('blur');
-	document.getElementById('hNav').classList.add('hNavHover');
-	document.getElementById('hSearch').classList.remove('togglehSearch');
-}
-</script>
+<script type="text/javascript" src="js/mahifam.js"></script>
 </body>
 </html>
