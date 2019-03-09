@@ -1,9 +1,98 @@
+body{overflow: scroll;overflow-x:hidden;overflow-y:auto;}
 .sortBox{display:block;float:left;width:100%;height:50px;margin-top:10px;margin-bottom:10px;
-background-color: #f0f0f0;font-family: 'B Helal';;box-shadow: 1px 3px 5px #000000,1px -3px 5px #000000;}
-.navPart{display:block;float:left;width:20%;height:50px;}
-.navPart a{text-decoration: none;display:block;float:left;text-align:center;color:#0f0f0f;margin:10px 5px 10px 30px;}
+	background-color: #f0f0f0;font-family: 'B Helal';box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000;
+	position: sticky;top:50px;z-index:5;}
+.navPart{display:block;float:left;width:35%;height:50px;position: sticky;top:50px;z-index:5;
+background-color: #f0f0f0;font-family: 'B Helal';box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000;}
+.navPart a,.navPart p{text-decoration: none;display:block;float:left;text-align:center;color:#0f0f0f;margin:10px 5px 10px 30px;}
 .navPart a:hover{color:#63a2ff;}
-.navPart p{display:block;float:left;color:#666666;text-align:center;margin:10px 0px 10px 5px;}
-.sortPart{display:block;float:left;width:70%;height:50px;}
-.filterBox{display:block;float:left;width:20%;height:800px;background-color: #f0f0f0;}
-.galleryBox{display:block;float:left;width:80%;height:800px;background-color: #000000;}
+.navPart p{color:#777777;margin:10px 0px 10px 5px;}
+.sortPart{display:block;float:left;width:65%;height:50px;position: sticky;top:50px;z-index:5;
+background-color: #f0f0f0;font-family: 'B Helal';box-shadow: 0px 3px 5px #000000, 0px -3px 5px #000000;}
+.sortPart p{display:block;float:right;height:45px;width:20%;direction: rtl;text-align: center;padding-top:5px;}
+.sortPart ul{display:block;float:right;width:80%;height:50px;}
+.sortPart li{display:block;float:right;width:20%;height:45px;text-align: center;padding-top:5px;direction:rtl;}
+.sortPart a{text-decoration: none;font-size: 14px;color:#111111;}
+.sortPart a:hover{background-color:#63a2ff;color:#ffffff;border-radius: 6px;padding:3px 8px 6px 8px;}
+.filterBox{display:block;float:left;width:20%;height:600px;background-color: #f0f0f0;}
+.galleryBox{display:block;float:left;width:79%;height:auto;background-color: #4286f4;
+	box-shadow: 1px 3px 5px #000000,-1px -1px 3px #000000;margin-right:1%;}
+.product{display:block;float:left;width:300px;height:300px;background-color:#ffffff;margin:1.66%;
+box-shadow: 1px 3px 5px #000000,-1px -1px 3px #000000;perspective: 1000px;border-radius: 6px;}
+.product img{width:300px;height:300px;border-radius: 6px;}
+.productInner {position: relative;width:300px;height:300px;text-align: center;transition: transform 0.6s;
+  transform-style: preserve-3d;}
+.product:hover .productInner{transform: rotateY(180deg);}
+.productFront, .productBack{position: absolute;width: 300px;height: 300px;backface-visibility: hidden;}
+.productFront {background-color: #bbb;color: black;z-index: 2;}
+.productBack {background-color: #ffffff;color: #000000;transform: rotateY(180deg);z-index: 1;}
+.productBack h2{font-family: 'B Helal';font-size:32px;text-align: center;padding-top:10px;}
+.productBack p{font-family: 'B Helal';text-align: center;padding-top:5px;}
+.productBack button{display:block;float:left;width:90%;height:40px;background-color: #14499e;color:#ffffff;
+	margin-left:5%;margin-top:10px;font-family: 'B Helal';cursor:pointer;border-radius: 8px;border:none;
+	box-shadow: 1px 4px 2px #000000;}
+.productBack button:hover{background-color: #0d3b84;box-shadow:0px 6px 2px #000000;}
+.productBack button:active{box-shadow:0px 2px 1px #000000;transform: translateY(4px);}
+.filterDiv{display:block;float:left;width:100%;height:200px;box-shadow: 1px 3px 5px #000000;}
+.sliderBox{display: block;float:left;width:100%;height:50px;padding-top:20px;}
+.sliderBox p{font-family: 'B Helal';text-align: center;}
+.slider{-webkit-appearance: none;width: 80%;height: 15px;margin-left:10%;border-radius: 5px;
+	background-color: #4286f4;outline: none;transition: background-color .2s;}
+.slider:hover {background-color: #0e57cc;}
+.filterText{display: block;float:left;width:100%;height:50px;}
+.filterText p {font-family: 'B Helal';text-align: center;padding-top:10px;}
+.filterBut{display:none;}
+.selectBrand {display:block;float:left;width: 80%;height:auto;margin-left:10%;margin-top:20px;border-radius: 3px;
+	overflow: hidden;background-color: #fafafa;-webkit-appearance:none;}
+.selectBrand select{text-align-last:center;font-size:16px;font-family: 'B Helal';direction: rtl;
+padding: 5px 20px 5px 0px;width: 100%;}
+.selectBrand option {font-size:18px;font-family:'Tahoma';direction:ltr;}
+
+@media screen and (max-width: 800px) {
+.navPart{width:70%;}
+.navPart a,.navPart p{margin:10px 2px 10px 5px;font-size: 14px;}
+.sortPart{width:30%;}
+.sortPart ul{display:block;width:50vw;position: absolute;right:-100vw;top:50px;
+transition: right 0.5s;}
+.showSort{right:1vw !important;}
+.sortPart ul li{width:100%;background-color: #0d3b84;font-size: 14px;margin-bottom:5px;border-radius: 6px;
+	box-shadow: 1px 4px 2px #000000;}
+.sortPart ul li a{color:#ffffff;}
+.sortPart a:hover{background-color: inherit;color:#000000;border-bottom:1px solid #ffffff;border-radius: 0;}
+.sortPart p{width:92%;margin: 7px 4% 0 4%;height:30px;cursor: pointer;background-color: #14499e;color:#ffffff;
+	box-shadow: 1px 4px 2px #000000;border-radius: 6px;}
+.sortPart p:hover{background-color: #0d3b84;box-shadow:0px 6px 2px #000000;}
+.sortPart p:active{box-shadow:0px 2px 1px #000000;transform: translateY(4px);}
+.filterBox{width:40%;}
+.galleryBox{width:59%;}
+.product{width:98%;height:auto;margin:1%;}
+.product img{display:block;float:left;width:100%;height:auto;}
+.productInner{display:block;float:left;width:100%;height:auto;}
+.productFront, .productBack{position:relative;display:block;float:left;width:100%;height:auto;}
+.productBack {position: absolute;}
+}
+@media screen and (max-width: 540px) {
+.navPart{width:100%;height:30px;position: relative;float:right;display:block;z-index:6;top:0;}
+.navPart p{margin:0;width:50%;height:30px;text-align:left;float:right;}
+.navPart a{margin:0;margin-right:2%;width:48%;height:30px;text-align:right;float:left;}
+.sortPart{width:50%;float:right;font-size:14px;}
+.filterBut{display:block;float:left;width:50%;height:50px;background-color:#f0f0f0;position:sticky;top:50px;z-index:5;
+box-shadow: 0px 3px 5px #000000, 0px -3px 5px #000000;font-size:14px;}
+.filterBut p{display:block;float:left;width:92%;margin:7px 4% 0 4%; height:30px;cursor: pointer;
+	background-color: #14499e;color:#ffffff;padding-top:5px;margin-top:7px;
+	border-radius: 6px;text-align: center;font-family: 'B Helal';box-shadow: 0px 4px 2px #000000;}
+.filterBut p:hover{background-color: #0d3b84;box-shadow:0px 6px 2px #000000;}
+.filterBut p:active{box-shadow:0px 2px 1px #000000;transform: translateY(4px);}
+.galleryBox{width:98%;margin:1%;}
+.product:hover .productInner{transform: none;}
+.productBack{display:block;transform: none;z-index:1;margin-bottom: 10px;}
+.productBack h2{font-size:26px;}
+.productBack p{display:none;}
+.productFront, .productBack{position: relative;}
+.productFront img{box-shadow: 1px 3px 5px #000000;}
+.filterBox{position: sticky;top:100px;width:100%;height:auto;z-index: 3;}
+.filterAbs{width:90%;z-index:5;left:-100%;position:absolute;top:0;overflow-y:auto;max-height: calc(100vh - 110px);
+ transition: left 1s;background-color: #f0f0f0;box-shadow: 1px 3px 5px #000000;}
+.showFilter{left:5% !important;}
+.sortPart ul{width:98%;}
+}

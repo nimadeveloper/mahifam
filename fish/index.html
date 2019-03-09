@@ -62,13 +62,229 @@
 	<div id='slide' class='slideShow'>
 	<img src="../images/fish.jpg" width='100%' height='auto'>
 	</div>
-	<div class='sortBox'>
-		<div class='navPart'><a href="#">صفحه اصلی</a><p> | ماهی آب شیرین</p></div>
-		<div class='sortPart'></div>
-	</div>
+	<!--<div id ='sort' class='sortBox'> -->
+		<div class='navPart'><a href="../index.html">صفحه اصلی</a><p> | ماهی آب شیرین</p></div>
+		<div class='sortPart'>
+			<p onclick='showSort();'>مرتب سازی </p>
+			<ul id='sortMenu'>
+				<li><a href="">ارزانترین</a>	</li>
+				<li><a href="">گرانترین</a></li>
+				<li><a href="">پرفروش ترین</a></li>
+				<li><a href="">جدیدترین</a></li>
+				<li><a href="">پربازدیدترین</a></li>
+			</ul>
+		</div>
+	<!--</div>-->
+	<div class='filterBut'><p onclick='showFilter();'>فیلتر</p></div>
 	<div class='filterBox'>
+		<div class='filterAbs' id='filterBox'>
+			<div class='filterDiv'>
+				<div class='filterText'><p>تعیین محدوده قیمت</p></div>
+				<div class='sliderBox'>
+				  <input type="range" min="0" max="1000000" value="0" step='10000' class="slider" id="minRange">
+				  <p>از : <span id='minPrice'></span> تومان</p>
+				</div>
+				<div class='sliderBox'>
+				  <input type="range" min="0" max="1000000" value="1000000" step='10000' class="slider" id="maxRange">
+				  <p>تا : <span id='maxPrice'></span> تومان</p>
+				</div>
+			</div>
+			<div class='filterDiv'>
+				<div class='filterText'><p>برند</p></div>
+				<div class='selectBrand'>
+				  <select>
+				    <option value="0">انتخاب برند </option>
+				    <option value="1">Audi</option>
+				    <option value="2">BMW</option>
+				    <option value="3">Citroen</option>
+				    <option value="4">Ford</option>
+				    <option value="5">Honda</option>
+				    <option value="6">Jaguar</option>
+				    <option value="7">Land Rover</option>
+				    <option value="8">Mercedes</option>
+				    <option value="9">Mini</option>
+				    <option value="10">Nissan</option>
+				    <option value="11">Toyota</option>
+				    <option value="12">Volvo</option>
+				  </select>
+				</div>
+			</div>
+			<div class='filterDiv'>
+				<div class='filterText'><p>گروه</p></div>
+				<div class='selectBrand'>
+				  <select>
+				    <option value="0">انتخاب گروه</option>
+				    <option value="1">Audi</option>
+				    <option value="2">BMW</option>
+				    <option value="3">Citroen</option>
+				    <option value="4">Ford</option>
+				    <option value="5">Honda</option>
+				    <option value="6">Jaguar</option>
+				    <option value="7">Land Rover</option>
+				    <option value="8">Mercedes</option>
+				    <option value="9">Mini</option>
+				    <option value="10">Nissan</option>
+				    <option value="11">Toyota</option>
+				    <option value="12">Volvo</option>
+				  </select>
+				</div>
+			</div>
+		</div>
 	</div>
-	<div class='galleryBox'></div>
+	<div class='galleryBox'>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-1.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-2.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-3.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-4.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-5.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-6.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-7.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-8.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus-9.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+		<div class='product'>
+			<div class="productInner">
+    			<div class="productFront">
+      				<img src="../images/fish/discus/discus.jpg" alt="Avatar" >
+    			</div>
+    			<div class="productBack">
+      				<h2>دیسکاس</h2> 
+      				<p>رنگ : قرمز</p> 
+     				<p>سایز : 5 اینچ</p>
+     				<p>قیمت  : 100000 تومان</p>
+     				<button>مشاهده</button>
+     				<button>افزودن به سبد خرید</button>
+    			</div>
+  			</div>
+		</div>
+
+
+	</div>
 </section>
 <footer>
 		<div class='subscriberText'>
@@ -97,5 +313,33 @@
 	</div>
 </footer>
 <script type="text/javascript" src="../js/mahifam.js"></script>
+<script type="text/javascript">
+var minRange = document.getElementById("minRange");
+var maxRange = document.getElementById("maxRange");
+var minPrice = document.getElementById("minPrice");
+var maxPrice = document.getElementById("maxPrice");
+minPrice.innerHTML = minRange.value;
+maxPrice.innerHTML = new Intl.NumberFormat().format(maxRange.value);
+var saveMinRange;
+
+minRange.oninput = function() {
+	minRange.min = 0;
+	maxRange.min = this.value;
+	minRange.max = maxRange.value - 10000;
+  		minPrice.innerHTML = new Intl.NumberFormat().format(this.value);
+}
+maxRange.oninput = function() {
+	maxRange.max = 1000000;
+	minRange.max = this.value;
+	maxPrice.innerHTML = new Intl.NumberFormat().format(this.value);
+}
+
+const showSort = () => {
+	document.getElementById('sortMenu').classList.toggle('showSort');
+}
+const showFilter = () => {
+	document.getElementById('filterBox').classList.toggle('showFilter');
+}
+</script>
 </body>
 </html>

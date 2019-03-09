@@ -9,7 +9,7 @@
 .hLogo p{text-align:center;font-family: 'Tangerine', cursive;font-size:4.5vw;padding-top:10px;
 text-shadow: 1px 1px #63a2ff;color:#63a2ff;}
 .fixhLogo{z-index:10;display:block;position:fixed;float:none;width:100%;height:50px;top:0px;left:0;
-box-shadow: 1px 3px 5px #000;background-color:#0a0a0a;opacity:0.9;transition: background-color 1s;}
+box-shadow: 1px 3px 5px #000;background-color:#0a0a0a;opacity:0.95;transition: background-color 1s;}
 .fixhLogo p{text-align:center;font-family: 'Tangerine', cursive;font-size:48px;padding-top:10px;
 text-shadow: 1px 1px #63a2ff;color:#63a2ff;transition: height 1s,font-size 1s;}
 /*search bar*/
@@ -30,12 +30,12 @@ height:50px;position: fixed;top:50px;right:0;box-shadow: 1px 3px 5px #111;transi
 .hIcons i{cursor:pointer;color: #63a2ff;font-size: 25px;display:block;float: right;margin:15px;margin-right:25px;}
 .fixhIcons{z-index:15;position: fixed;float:none;right:0px;top:0px;}
 #searchIcon{display:none;}
-.cartBar{z-index:1;display: block;visibility: hidden; position:absolute;top:120px;right:0;width:25%;height:0px;
+.cartBar{z-index:5;display: block;visibility: hidden; position:absolute;top:120px;right:0;width:25%;height:0px;
 background-color: #000000;box-shadow: 1px 3px 5px #000;border-radius: 0 0 6px 6px;transition: height 0.3s;}
 .cartBar p{text-align: center;color:#ffffff;font-size:16px;font-family: 'B Helal';padding-top:30px;}
 .toggleCartBar{visibility: visible;height:100px;}
 .fixedCartBar{visibility: visible;position:fixed;top:50px;height:100px;}
-.accountBar{z-index:1;display: block;visibility: hidden; position:absolute;top:120px;right:0;width:25%;height:0px;
+.accountBar{z-index:5;display: block;visibility: hidden; position:absolute;top:120px;right:0;width:25%;height:0px;
 background-color: #000000;box-shadow: 1px 3px 5px #000;border-radius: 0 0 6px 6px;transition: 0.3s height;}
 .accountBar p{text-align: center;color:#ffffff;font-size:16px;font-family: 'B Helal';padding-top:30px;}
 .toggleAccountBar{visibility: visible;height:100px;}
@@ -78,8 +78,8 @@ max-height:500px;top:0;right:0;background-color: #000000;}
 border:none;color:#000000;width:100%;height:40px;transition:all 1.3s;}
 .showSubMenu >li > a{color:#000000;}
 .showSubMenu li:hover a{color:#63a2ff;}
-/*slid Show*/
-section{display:block;float:left;width:100%;height:auto;padding-bottom:50px;background-color:#102296; }
+/*Section*/
+section{display:block;float:left;width:100%;height:auto;padding-bottom:20px;background-color:#102296; }
 .slideShow{filter:blur(0px);display:block;float:left;width:100%;height:auto;margin-top:10px;
 -webkit-transition: 0.5s -webkit-filter linear;-o-transition: 0.5s -o-filter linear;}
 .slideBlur{filter:blur(5px);-webkit-transition: 0.5s -webkit-filter linear;-o-transition: 0.5s -o-filter linear;}
@@ -95,13 +95,26 @@ color:#666666;}
 .txtSection p{text-align: right;font-family: 'B Helal';padding: 30px;color:#cccccc;}
 .imgSection{display: block;float: left;width: 90%;margin-left:5%;height: 300px;
 box-shadow: 1px 3px 5px #000000,-1px -3px 5px #000000;}
-.imgSection1{background: #000000 url('../images/imgsection1.jpg') fixed no-repeat center;
-}
+.imgSection1{background: #000000 url('../images/imgsection1.jpg') fixed no-repeat center;}
 .imgSection2{display:block;float:left;width:90%;height:auto;margin-bottom:10px;margin-left:5%;}
 .imgSection2 img{width:100%;height:auto;box-shadow: 1px 3px 5px #000000,-1px -3px 5px #000000;
 border-radius:5px 5px 5px 5px;}
 .imgSection3{background: #000000 url('../images/imgsection3.jpg') fixed no-repeat center;
 vertical-align: middle;background-size: 100%;background-position: 50% 50%;}
+/*shop part*/
+.shopBox{display:block;float:left;width:96%;height:auto;margin:20px 2% 0 2%;}
+.shopBox p {position: absolute;text-align:center;color:#000000;border:1px solid red;height:0px;padding-top:0px;
+	font-family: 'B Helal';font-size: 3.0vw;z-index:1;}
+.shopBox1 p{width:56.5%;}
+.shopBox2 p{width:38.5%;}
+.shopBox3 p{width:27.5%;}
+.shopBox4 p{width:27.5%;}
+.shopBox img{width:100%;height:auto;vertical-align: middle;transition: 0.3s filter linear;}
+.shopBox img:hover{filter:grayscale(100%);transition: 0.3s filter linear;}
+.shopBox1{display:block;float:left;width:59%;height:auto;margin:0 1% 1% 0;box-shadow: 1px 3px 5px #000000,-1px -3px 5px #000000;}
+.shopBox2{display:block;float:right;width:40%;height:auto;box-shadow: 1px 3px 5px #000000,-1px -3px 5px #000000;}
+.shopBox3{display:block;float:left;width:29%;height:auto;margin:0 1% 0 0;box-shadow: 1px 3px 5px #000000,-1px -3px 5px #000000;}
+.shopBox4{display:block;float:left;width:29%;height:auto;margin:0 1% 0 0;box-shadow: 1px 3px 5px #000000,-1px -3px 5px #000000;}
 /*footer*/
 footer{display:block;float:left;width:100%;height:auto;background-color:#0a0a0a;
 box-shadow: 1px -5px 5px #000;}
@@ -117,12 +130,13 @@ box-shadow: 1px -5px 5px #000;}
 text-decoration: none;transition: color 1s;}
 .link a:hover{color: #ffffff;transition: color 1s;}
 .social{display:block;float:right;width:27%;padding-left:5%;height:50px;}
-.social a{display:block;float:left;width:20%;height: 50px;cursor: pointer;-webkit-border-radius: 6px;border-radius: 6px;
+.social a{display:block;float:left;width:20%;height: 50px;cursor: pointer;-webkit-border-radius: 6px;border-radius: 50px;
 color: #fff;text-align: center;-webkit-transition: background 1.5s, color 1.5s, box-shadow 1.5s;
 -moz-transition: background 1.5s, color 1.5s, box-shadow 1.5s;transition: background 1.5s, color 1.5s, box-shadow 1.5s;}
-.social i{padding-top:10px;font-size:22px;}
+.social i{padding-top:10px;font-size:22px;transition: transform 0.5s;}
 .social a:hover{color:#fff;-webkit-transition: background 0.6s, color 0.6s, box-shadow 0.6s;
 -moz-transition: background 0.6s, color 0.6s, box-shadow 0.6s;transition: background 0.6s, color 0.6s, box-shadow 0.6s;}
+.social a:hover i{transform: translateY(5px);transition: transform 0.5s;}
 #facebook{color:#3B5998;}#facebook:hover{color:#fff;}
 #telegram{color:#0088cc;}#telegram:hover{color:#fff;}
 #instagram{color:#c13584;}#instagram:hover{color:#fff;}
@@ -133,13 +147,14 @@ color: #fff;text-align: center;-webkit-transition: background 1.5s, color 1.5s, 
 font-family: 'B Helal';}
 .subscriber input[type=email] {display:block;float:left;width: 80%;height:40px;box-sizing: border-box;
 border: 2px solid #ccc;-webkit-border-radius: 4px;border-radius: 4px;font-size: 16px;background-color: #fffffc;
--webkit-transition: width 0.4s ease-in-out;transition: width 0.4s ease-in-out,margin 0.4s;padding: 10px;margin-top:5px;}
+-webkit-transition: width 0.4s ease-in-out;transition: width 0.4s ease-in-out,margin 0.4s;padding: 10px;
+box-shadow:inset 2px 3px 4px #000000,inset -2px -3px 4px #000000;margin-top:5px;}
 .subscriber input[type=submit] {display:block;float:left;cursor:pointer;width: 20%;height:40px;-webkit-border-radius: 4px;
 border-radius: 4px;font-size: 12px;background-color: #000;color:#ffffff;margin-top:5px;}
 .subscriber input[type=submit]:hover{color:#68a2ff;}
 /*until 800px*/
 @media screen and (max-width: 800px) {
-.header{z-index:10;width: 100%;height:50px;position:fixed;top:0;left:0;box-shadow: 1px 3px 5px #000;opacity:0.9;}
+.header{z-index:10;width: 100%;height:50px;position:fixed;top:0;left:0;box-shadow: 1px 3px 5px #000;opacity:0.95;}
 .hSearch{visibility:hidden;}
 .togglehSearch{z-index:11;background-color: #000000;display:block; visibility: visible;float:none;width:100%;
 height:50px;position: fixed;top:50px;right:0;box-shadow: 1px 3px 5px #111;transition: 0.3s width;opacity:0.9;}
@@ -195,6 +210,10 @@ section{margin-top:50px;}
 .txtSection h1 , .txtSection h2{font-size:18px;padding-right:0;text-align: center;}
 .txtSection p{font-size: 14px;text-align: center;}
 .imgSection{height:100px;width:100%;margin:0;}
+.shopBox1{width:100%;}
+.shopBox2{width:45%;margin-top:5px;}
+.shopBox3{width:54%;margin-top:5px;}
+.shopBox4{width:100%;margin-top:10px;}
 }
 /*until 540px*/
 @media screen and (max-width: 540px) {
@@ -208,7 +227,7 @@ section{margin-top:50px;}
 #searchIcon{z-index:16;position: fixed;left:20%;top:0;}
 .social{width:60%;position: relative;float:left;}
 .social a{width:25%;}
-.subscriber{width:100%;position: relative;float:left;left:0;}
+.subscriber{width:90%;position: relative;float:left;left:5%;}
 .fLogo{width:40%;}
 }
 /*until 400px*/
@@ -221,4 +240,7 @@ section{margin-top:50px;}
 .link a{width:50%;}
 .fLogo{width:45%;}
 .social{width:55%;}
+.subscriber{height:100px;}
+.subscriber input[type=email]{width:100%;}
+.subscriber input[type=submit]{width:100%;}
 }

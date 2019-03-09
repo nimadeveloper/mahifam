@@ -1,0 +1,65 @@
+.navBox{display:block;float:left;width:96%;height:50px;padding-left:2%;padding-right:2%;margin-top:10px;
+	margin-bottom:10px;	background-color: #f0f0f0;font-family: 'B Helal';
+	box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000;z-index:4;}
+.navBox a,.navBox p{text-decoration: none;display:block;float:left;text-align:center;color:#0f0f0f;
+	margin:10px 5px 10px 10px;}
+.navBox p{color:#777777;margin:10px 0px 10px 10px;}
+.navBox a:hover{color:#63a2ff;}
+.productImg{display:block;float:right;width:500px;height:500px;margin-right:1%;}
+.productImg img{width:500px;height:500px;vertical-align: middle;border-radius: 6px;
+	box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000;}
+.productTags{display:block;float:left;width:calc(97% - 500px);height:480px;background-color: #9bc1f7;
+	margin-left:1%;padding-bottom:20px;box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000;border-radius: 6px;}
+.productTags h1{font-family: 'B Helal';text-align: center;padding-top: 20px;font-size:3.5vw;}
+.productTags p{font-family: 'B Helal';text-align: right;font-size:18px;color:#333333;padding-right:30px;
+padding-top:15px;direction: rtl;}
+.productTags button{display:block;float:right;width:50%;height:50px;background-color: #14499e;color:#ffffff;
+	margin-right:3%;margin-top:10px;font-family: 'B Helal';cursor:pointer;border-radius: 8px;border:none;
+	box-shadow: 1px 4px 2px #000000;}
+.productTags button:hover{background-color: #0d3b84;box-shadow:0px 6px 2px #000000;}
+.productTags button:active{box-shadow:0px 2px 1px #000000;transform: translateY(4px);}
+p.productPrice{font-size: 38px;padding-right:30px;color:#0d489b;}
+del.productPrePrice{display:block;direction:rtl;font-size: 24px;padding-right:30px;color:#999999;text-align: right;}
+.productDescript{display:block;float:right;width:98%;height:auto;margin-right:1%;margin-top:10px;
+	background-color:#9bc1f7;box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000; }
+.productDescript p{font-family: 'B Helal';text-align: right;font-size:18px;color:#333333;padding:30px;
+padding-top:20px;direction: rtl;line-height: 30px;}
+/*slider*/
+.sliderBox{display:block;float:left;width:98%;height:auto;margin-left:5%;margin:1%;padding-top:50px;padding-bottom:50px;
+	background-color:#9bc1f7;box-shadow: 1px 3px 5px #000000, 1px -3px 5px #000000;}
+.sliderBox p{font-family: 'B Helal';text-align: right;font-size:22px;color:#000000;padding:30px;
+padding-top:20px;direction: rtl;}
+.jssorb03 {position: absolute;}
+.jssorb03 div, .jssorb03 div:hover, .jssorb03 .av {position: absolute;width: 21px;height: 21px;text-align: center;line-height: 21px;color: white;font-size: 12px;background: url('../images/b03.png') no-repeat;overflow: hidden;cursor: pointer;}
+.jssorb03 div { background-position: -5px -4px;}
+.jssorb03 div:hover, .jssorb03 .av:hover { background-position: -35px -4px;}
+.jssorb03 .av { background-position: -65px -4px;}
+.jssorb03 .dn, .jssorb03 .dn:hover { background-position: -95px -4px;}
+.jssora03l, .jssora03r {display: block;position: absolute;width: 55px;height: 55px;cursor: pointer;background: url('../images/a03.png') no-repeat;overflow: hidden;}
+.jssora03l { background-position: -3px -33px; }
+.jssora03r { background-position: -63px -33px; }
+.jssora03l:hover { background-position: -123px -33px; }
+.jssora03r:hover { background-position: -183px -33px; }
+.jssora03l.jssora03ldn { background-position: -243px -33px; }
+.jssora03r.jssora03rdn { background-position: -303px -33px; }
+.slider{box-shadow: 1px 3px 5px #000000;position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1020px; height: 200px; overflow: hidden; visibility: hidden;}
+.slides{cursor: default; position: relative; top: 0px; left: 0px; width: 1020px; height: 200px; overflow: hidden;}
+.bullet{bottom:10px;right:10px;}
+.larrow{top:0px;left:8px;width:55px;height:55px;}
+.rarrow{top:0px;right:8px;width:55px;height:55px;}
+@media screen and (max-width: 800px) {
+.productImg{width:96%;height:auto;margin:2%;}
+.productImg img{width:100%;height:auto;}
+.productTags{width:96%;height:auto;margin:2%;}
+p.productPrice{font-size: 5vw;}
+.sliderBox{padding-top:10px;padding-bottom: 10px;}
+}
+@media screen and (max-width: 540px) {
+.productTags h1{font-size:28px;}
+.productTags button{width:90%;margin-right:5%;}
+.productTags p{text-align: center;padding: 0;padding-top:12px;}
+p.productPrice{font-size: 26px;}
+del.productPrePrice{text-align: center;padding:0;}
+.productDescript p{font-size:16px;padding:10px;text-align: center;}
+.navBox a,.navBox p{font-size:14px;margin-left:5px;}
+}

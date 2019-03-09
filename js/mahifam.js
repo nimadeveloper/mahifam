@@ -63,7 +63,7 @@ var showSubMenu = document.getElementsByClassName('subMenu');
 }
 
 myScroll = () => {
-	var width = document.body.clientWidth;
+	var width = window.innerWidth;
 	var showSubMenu = document.getElementsByClassName('subMenu');
 	var menuClick = document.querySelectorAll('.hNav > ul > li');
 		for(var i=0;i<showSubMenu.length;i++){
@@ -94,9 +94,6 @@ myScroll = () => {
 		}
 	}
 	else {
-			document.getElementById("slide").className = "slideShow";
-			document.getElementById("accountBar").className = "accountBar";
-			document.getElementById("cartBar").className = "cartBar";
 		if(width <= 800){
 			document.getElementById('searchIcon').style.display = 'block';
 			document.getElementById("hSearch").classList.add('fixhSearch');
@@ -119,6 +116,9 @@ myScroll = () => {
 			}
 
 		}
+			document.getElementById("slide").className = "slideShow";
+			document.getElementById("accountBar").className = "accountBar";
+			document.getElementById("cartBar").className = "cartBar";
 	}
 }
 showCart = () => {
